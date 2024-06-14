@@ -1,0 +1,198 @@
+/* Reset básico e estilos gerais */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: url('images/layer2.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000; /* Cor do texto preto */
+    overflow: hidden; /* Oculta a barra de rolagem */
+}
+
+.card {
+    background-color: rgba(255, 228, 225, 0.9); /* Cor de fundo rosa claro */
+    border-radius: 15px;
+    padding: 2em;
+    width: 90%;
+    max-width: 600px;
+    height: 90%;
+    max-height: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumentei o desfoque da sombra para 16px */
+    text-align: left;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Adiciona barra de rolagem apenas no conteúdo dentro do card */
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #ff1493;
+    padding-bottom: 0.5em;
+}
+
+.tablink {
+    background-color: #ff69b4;
+    border: none;
+    padding: 0.5em 1em; /* Reduzido o padding vertical */
+    margin: 0 0.5em;
+    cursor: pointer;
+    font-size: 0.9em; /* Reduzido o tamanho da fonte */
+    color: #fff; /* Cor do texto branco */
+    border-radius: 10px 10px 0 0;
+}
+
+.tablink.active {
+    background-color: #ff1493;
+}
+
+.tabcontent-container {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.tabcontent {
+    display: none;
+    padding: 1em;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.tabcontent h2 {
+    color: #ff1493;
+}
+
+.tabcontent p {
+    margin-bottom: 1em;
+}
+
+.tabcontent ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tabcontent ul li {
+    margin: 1em 0;
+}
+
+.tabcontent ul li a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.game-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.character {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    border-bottom: 1px solid #ccc;
+    padding: 1em 0; /* Ajusta o padding para centralizar verticalmente */
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+.character img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 1em;
+    margin-bottom: 0; /* Remove a margem inferior para alinhar melhor */
+}
+
+.character .description {
+    flex: 1;
+    text-align: left;
+}
+
+.character h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.character p {
+    margin: 0.5em 0;
+    font-size: 0.9em;
+}
+
+.back-link {
+    margin-left: auto;
+    color: #ff69b4;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.lovetech-image {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 3em auto; /* Espaçamento opcional abaixo da imagem */
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: 90%;
+        padding: 1em;
+        max-width: 600px;
+        max-height: 600px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tablink {
+        margin: 0.5em 0;
+    }
+
+    .character {
+        align-items: center; /* Centraliza os personagens em dispositivos móveis */
+        text-align: center; /* Alinha o texto ao centro em dispositivos móveis */
+        padding: 1em 0; /* Ajusta o padding para centralizar verticalmente */
+    }
+
+    .character img {
+        max-width: 100%;
+        margin-bottom: 0.5em;
+    }
+}
+
+.preview-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.preview-images img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5em;
+    border-radius: 8px;
+}

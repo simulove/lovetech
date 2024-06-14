@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveTech - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicionando o favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="card">
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'about')">About</button>
+            <button class="tablink" onclick="openTab(event, 'games')">Games</button>
+        </div>
+        <div class="tabcontent-container">
+            <div id="about" class="tabcontent active">
+                <img src="images/lovetech.png" alt="LoveTech" class="lovetech-image">
+                <p><strong>LoveTech</strong> is a dedicated team of creators passionate about crafting immersive visual novel experiences. Our inspiration comes from the storytelling and artistic style of bishoujo games.</p>
+                <p>Immerse yourself in compelling narratives set in diverse worlds, where every decision you make influences the course of the story. Whether you seek heartfelt romance, thrilling mysteries, or gripping adventures, LoveTech offers a journey tailored to your choices.</p>
+                <p>Join us as we continue to push the boundaries of interactive storytelling through innovative gameplay mechanics and captivating visuals.</p>
+            </div>
+            <div id="games" class="tabcontent">
+                <h2>Our Games</h2>
+                <a href="simulove.html">
+                    <img src="images/simulove.png" alt="SimuLove" class="game-image">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
