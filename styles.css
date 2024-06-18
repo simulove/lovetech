@@ -22,14 +22,21 @@ body {
     padding: 2em;
     width: 90%;
     max-width: 600px;
-    height: 90%;
-    max-height: 600px;
+    height: auto;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumentei o desfoque da sombra para 16px */
     text-align: left;
-    margin: 1em;
+    margin: auto;
     display: flex;
     flex-direction: column;
     overflow-y: auto; /* Adiciona barra de rolagem apenas no conteúdo dentro do card */
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 1em;
+        max-width: 600px;
+    }
 }
 
 
