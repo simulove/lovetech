@@ -13,7 +13,7 @@ body {
     align-items: center;
     height: 100vh;
     color: #000; /* Cor do texto preto */
-    overflow: hidden; /* Oculta a barra de rolagem */
+    overflow: auto; /* Permite a rolagem se necessário */
 }
 
 .card {
@@ -165,9 +165,8 @@ body {
     .card {
         width: 90%;
         height: 90%;
-        padding: 1em;
-        max-width: 600px;
-        max-height: 600px;
+        max-width: 300px;
+        max-height: 550px;
     }
 
     .tabs {
