@@ -133,8 +133,17 @@
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
+        
+            if (tabName === 'preview') {
+                var isOldEnough = window.confirm("Are you of legal age? Click 'OK' for Yes, 'Cancel' for No.");
+                if (isOldEnough) {
+                    document.getElementById(tabName).classList.add("active");
+                    evt.currentTarget.classList.add("active");
+                }
+            } else {
+                document.getElementById(tabName).classList.add("active");
+                evt.currentTarget.classList.add("active");
+            }
         }
     </script>
 </body>
