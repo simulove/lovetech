@@ -14,6 +14,7 @@
             <button class="tablink active" onclick="openTab(event, 'characters')">Characters</button>
             <button class="tablink" onclick="openTab(event, 'preview')">Preview</button>
             <button class="tablink" onclick="openTab(event, 'play')">Play</button>
+            <button class="tablink" onclick="openTab(event, 'patreon')">Patreon</button>
             <a href="index.html" class="back-link">Back to Home</a>
         </div>
         <div class="tabcontent-container">
@@ -119,6 +120,12 @@
                 <h2>Play</h2>
                 <p>Placeholder text for Play.</p>
             </div>
+            <!-- Conteúdo do Patreon -->
+            <div id="patreon" class="tabcontent">
+                <h2>Support Us on Patreon!</h2>
+                <p>Become a patron and enjoy exclusive content, behind-the-scenes looks, and more. Your support helps us continue creating!</p>
+                <a href="https://www.patreon.com/LoveTechGames" target="_blank">Visit our Patreon</a>
+            </div>
         </div>
     </div>
     
@@ -133,17 +140,8 @@
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-        
-            if (tabName === 'preview') {
-                var isOldEnough = window.confirm("Are you of legal age? Click 'OK' for Yes, 'Cancel' for No.");
-                if (isOldEnough) {
-                    document.getElementById(tabName).classList.add("active");
-                    evt.currentTarget.classList.add("active");
-                }
-            } else {
-                document.getElementById(tabName).classList.add("active");
-                evt.currentTarget.classList.add("active");
-            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
     </script>
 </body>
