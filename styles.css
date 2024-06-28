@@ -31,15 +31,6 @@ body {
     overflow-y: auto; /* Adiciona barra de rolagem apenas no conteúdo dentro do card */
 }
 
-@media (max-width: 768px) {
-    .card {
-        width: 90%;
-        padding: 1em;
-        max-width: 600px;
-    }
-}
-
-
 .tabs {
     display: flex;
     justify-content: center;
@@ -170,12 +161,15 @@ body {
     }
 
     .tabs {
-        flex-direction: column;
+        display: flex; /* Garante que os tabs sejam flexíveis */
+        flex-direction: row; /* Muda a direção para linha, colocando os itens lado a lado */
+        justify-content: center; /* Centraliza os itens na linha */
+        flex-wrap: wrap; /* Permite que os itens se ajustem conforme o espaço disponível */
         align-items: center;
     }
 
     .tablink {
-        margin: 0.5em 0;
+        margin: 0.5em; /* Ajusta a margem para espaçamento uniforme */
     }
 
     .character {
@@ -189,7 +183,6 @@ body {
         margin-bottom: 0.5em;
     }
 }
-
 .preview-images {
     display: flex;
     flex-wrap: wrap;
