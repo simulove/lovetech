@@ -32,6 +32,14 @@ body {
     overflow-y: auto; /* Adiciona barra de rolagem apenas no conteúdo dentro do card */
 }
 
+.steam-icon {
+    width: 100%; /* A imagem se ajustará à largura do container, mantendo a proporção */
+    max-width: 400px; /* Reduzindo o tamanho máximo para 400px */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Trata a imagem como um bloco, permitindo o uso de margin auto */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente no container */
+}
+
 .tabs {
     display: flex;
     justify-content: center;
@@ -116,6 +124,11 @@ body {
     border-radius: 8px;
     margin-right: 1em;
     margin-bottom: 0; /* Remove a margem inferior para alinhar melhor */
+}
+
+.steam-icon {
+    max-width: 100%; /* Faz a imagem se ajustar à largura do container */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .character .description {
